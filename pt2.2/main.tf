@@ -80,7 +80,7 @@ resource "aws_route_table_association" "assoc_b" {
 
 # 5. Grup de seguretat
 resource "aws_security_group" "sg" {
-  name        = "sg-pt2-2"
+  name        = "security-group-pt2-2"
   description = "Security group per a pt2.2"
   vpc_id      = aws_vpc.vpc_03.id
 
@@ -109,7 +109,7 @@ resource "aws_security_group" "sg" {
   }
 
   tags = {
-    Name = "sg-pt2-2"
+    Name = "security-group-pt2-2"
   }
 }
 
@@ -120,7 +120,12 @@ data "aws_ami" "al2023" {
 
   filter {
     name   = "name"
-    values = ["al2023-ami-*-amd64"]
+    values = ["al2023-ami-*-x86_64"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 }
 
