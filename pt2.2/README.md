@@ -13,6 +13,21 @@ En aquesta pràctica s'ha automatitzat el desplegament d'una infraestructura bà
   - Trànsit ICMP permès només des del rang de la VPC (`10.0.0.0/16`).
   - Trànsit sortint lliure.
 - **Instàncies EC2:** Dues màquines `t3.micro` amb Amazon Linux (`ec2-a` i `ec2-b`), cadascuna en una subxarxa diferent amb la clau `vockey`.
+## 📸 Evidències
+
+### Topologia de la xarxa
+
+![Topologia](./assets/topologia.png)
+
+
+### VPC i Mapa de Recursos
+
+![VPC i Subxarxes](./assets/vpc_subnets.png)
+
+
+### Instàncies EC2
+
+![Instàncies EC2](./assets/ec2_instances.png)
 
 ## Com executar-ho
 1. Inicialitzar Terraform:
